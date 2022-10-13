@@ -1,0 +1,5 @@
+*.db
+**/.settings
+**/.project
+**/.classpath
+**/target

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info">
+
+	<Properties>
+		<Property name="log4j.skipJansi">false</Property>
+		<Property name="highlightedPattern">%highlight{%d [%MDC{sync}%thread][%MDC{controlStation},%MDC{subject}]%marker %-5level %c{1} - %msg (%F:%L\)}{STYLE=Logback} %n</Property>
+	</Properties>
+
+	<Appenders>
+		<Console name="STDOUT" target="SYSTEM_OUT">
+			<PatternLayout noConsoleNoAnsi="false"
+				disableAnsi="false"
+				pattern="${highlightedPattern}" />
+		</Console>
+	</Appenders>
+	<Loggers>
+		<Root level="INFO">
+			<AppenderRef ref="STDOUT" />
+		</Root>
+	</Loggers>
+</Configuration>
